@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+/**
+ * Created by Q-Solutions Studio
+ *
+ * @category    Magespices
+ * @package     Magespices_TempAdmin
+ * @author      Sebastian Strojwas <sebastian@qsolutionsstudio.com>
+ */
+ -->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="admin_access_temp">
+        <column xsi:type="int" name="id" comment="ID" nullable="false" unsigned="true" identity="true" />
+        <column xsi:type="int" name="admin_id" comment="Admin  ID" nullable="false" />
+        <column xsi:type="timestamp" name="valid_until" comment="Valid Until" nullable="false" />
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+</schema>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+/**
+ * Created by Q-Solutions Studio
+ *
+ * @category    Magespices
+ * @package     Magespices_TempAdmin
+ * @author      Sebastian Strojwas <sebastian@qsolutionsstudio.com>
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="magespices" translate="label" sortOrder="10">
+            <label>Magespices</label>
+        </tab>
+        <section id="temp_admin" translate="label" type="text" sortOrder="10" showInDefault="1" showInStore="1" showInWebsite="1">
+            <label>TempAdmin</label>
+            <resource>Magespices_TempAdmin::config</resource>
+            <tab>magespices</tab>
+            <class>separator-top</class>
+            <group id="general" sortOrder="10" translate="label" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="enabled" type="select" translate="label" sortOrder="10" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="secret_uri" type="text" translate="label" sortOrder="20" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Secret URI</label>
+                    <validate>required-entry validate-length minimum-length-8</validate>
+                    <comment>min length: 8</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="email" type="text" translate="label" sortOrder="30" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Email</label>
+                    <validate>required-entry validate-email</validate>
+                    <comment>notifications will be send to this address</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="password_length" type="text" translate="label" sortOrder="40" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Password Length</label>
+                    <validate>required-entry validate-digits validate-not-negative-number validate-digits-range digits-range-7-32</validate>
+                    <comment>range: 7 - 32</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="email_domain" type="text" translate="label" sortOrder="50" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Email Domain</label>
+                    <validate>required-entry</validate>
+                    <comment>email domain for newly created accounts</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,53 @@
+<?php
+/** @var $block Form */
+
+use Magespices\TempAdmin\Block\Form;
+?>
+
+<?php if ($block->checkIfFormShouldBeShown()) : ?>
+<div data-mage-init='{"tempAdminForm": {}}'>
+    <div id="temp_admin_notification">
+        <p class="js-message" />
+    </div>
+    <form id="temp_admin" action="<?php echo $block->getFormAction() ?>" method="post">
+        <input type="hidden" name="form_key" value="<?php echo $block->getFormKey(); ?>"/>
+        <div>
+            <label>
+                <?php echo __('Admin Role'); ?>
+                <span class="required">*</span>
+            </label>
+            <select name="role_id" class="required-entry">
+                <option value=""><?php echo __('Select Admin Role'); ?></option>
+                <?php foreach ($block->getUserRoles() as $userRoleId => $userRoleName) : ?>
+                    <option value="<?php echo $userRoleId; ?>"><?php echo $userRoleName; ?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+
+        <div>
+            <label>
+                <?php echo __('Duration'); ?>
+                <span class="required">*</span>
+            </label>
+            <select name="duration" class="required-entry">
+                <option value=""><?php echo __('Select Duration'); ?></option>
+                <option value="1"><?php echo __('One day'); ?></option>
+                <option value="2"><?php echo __('One week'); ?></option>
+                <option value="3"><?php echo __('One month'); ?></option>
+            </select>
+        </div>
+
+        <button type="submit" class="button">
+            <?php echo __('Create'); ?>
+        </button>
+    </form>
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "#temp_admin": {
+            "validation": {}
+        }
+    }
+</script>
+<?php endif;
