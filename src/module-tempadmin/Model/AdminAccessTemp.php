@@ -1,19 +1,19 @@
 <?php
 /**
- * Created by Q-Solutions Studio
+ * Copyright © Q-Solutions Studio: eCommerce Nanobots. All rights reserved.
  *
- * @category    Magespices
- * @package     Magespices_TempAdmin
+ * @category    Nanobots
+ * @package     Nanobots_TempAdmin
  * @author      Sebastian Strojwas <sebastian@qsolutionsstudio.com>
  */
 
-namespace Magespices\TempAdmin\Model;
+namespace Nanobots\TempAdmin\Model;
 
 use Magento\Framework\Model\AbstractModel;
 
 /**
  * Class AdminAccessTemp
- * @package Magespices\TempAdmin\Model
+ * @package Nanobots\TempAdmin\Model
  */
 class AdminAccessTemp extends AbstractModel
 {

@@ -1,17 +1,17 @@
 <?php
 /**
- * Created by Q-Solutions Studio
+ * Copyright © Q-Solutions Studio: eCommerce Nanobots. All rights reserved.
  *
- * @category    Magespices
- * @package     Magespices_TempAdmin
+ * @category    Nanobots
+ * @package     Nanobots_TempAdmin
  * @author      Sebastian Strojwas <sebastian@qsolutionsstudio.com>
  */
 
-namespace Magespices\TempAdmin\Block;
+namespace Nanobots\TempAdmin\Block;
 
 use Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context;
-use Magespices\TempAdmin\Helper\Data as TempAdminHelper;
+use Nanobots\TempAdmin\Helper\Data as TempAdminHelper;
 
 class Form extends Template
 {

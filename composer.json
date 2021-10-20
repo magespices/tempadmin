@@ -1,0 +1,27 @@
+{
+  "name": "enanobots/m2-tempadmin",
+  "type": "magento2-module",
+  "license": "OSL-3.0",
+  "authors": [
+    {
+      "email": "sebastian@qsolutionsstudio.com",
+      "name": "Sebastian Strojwas"
+    },
+    {
+      "email": "nanobotsecommerce@gmail.com",
+      "name": "eCommerce Nanobots"
+    }
+  ],
+  "description": "Magento 2 Temporary Admin User Account",
+  "homepage": "https://github.com/enanobots/m2-tempadmin",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "files": [
+      "src/module-tempadmin/registration.php"
+    ],
+    "psr-4": {
+      "Nanobots\\AttributeOptionPager\\": "src/module-tempadmin/"
+    }
+  }
+}

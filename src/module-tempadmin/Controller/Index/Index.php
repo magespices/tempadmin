@@ -1,15 +1,15 @@
 <?php
 /**
- * Created by Q-Solutions Studio
+ * Copyright © Q-Solutions Studio: eCommerce Nanobots. All rights reserved.
  *
- * @category    Magespices
- * @package     Magespices_TempAdmin
+ * @category    Nanobots
+ * @package     Nanobots_TempAdmin
  * @author      Sebastian Strojwas <sebastian@qsolutionsstudio.com>
  */
 
 declare(strict_types=1);
 
-namespace Magespices\TempAdmin\Controller\Index;
+namespace Nanobots\TempAdmin\Controller\Index;
 
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\App\RequestInterface;

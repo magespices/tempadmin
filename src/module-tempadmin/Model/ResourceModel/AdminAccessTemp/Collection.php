@@ -1,20 +1,20 @@
 <?php
 /**
- * Created by Q-Solutions Studio
+ * Copyright © Q-Solutions Studio: eCommerce Nanobots. All rights reserved.
  *
- * @category    Magespices
- * @package     Magespices_TempAdmin
+ * @category    Nanobots
+ * @package     Nanobots_TempAdmin
  * @author      Sebastian Strojwas <sebastian@qsolutionsstudio.com>
  */
 
-namespace Magespices\TempAdmin\Model\ResourceModel\AdminAccessTemp;
+namespace Nanobots\TempAdmin\Model\ResourceModel\AdminAccessTemp;
 
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
-use Magespices\TempAdmin\Model\AdminAccessTemp;
+use Nanobots\TempAdmin\Model\AdminAccessTemp;
 
 /**
  * Class Collection
- * @package Magespices\TempAdmin\Model\ResourceModel\AdminAccessTemp
+ * @package Nanobots\TempAdmin\Model\ResourceModel\AdminAccessTemp
  */
 class Collection extends AbstractCollection
 {
@@ -22,7 +22,7 @@ class Collection extends AbstractCollection
     {
         $this->_init(
             AdminAccessTemp::class,
-            \Magespices\TempAdmin\Model\ResourceModel\AdminAccessTemp::class
+            \Nanobots\TempAdmin\Model\ResourceModel\AdminAccessTemp::class
         );
     }
 }

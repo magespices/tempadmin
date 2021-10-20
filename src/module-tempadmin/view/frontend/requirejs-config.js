@@ -1,7 +1,7 @@
 let config = {
     map: {
         '*': {
-            tempAdminForm: 'Magespices_TempAdmin/js/form',
+            tempAdminForm: 'Nanobots_TempAdmin/js/form',
         }
     }
 };

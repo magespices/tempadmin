@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!--
 /**
- * Created by Q-Solutions Studio
+ * Copyright © Q-Solutions Studio: eCommerce Nanobots. All rights reserved.
  *
- * @category    Magespices
- * @package     Magespices_TempAdmin
+ * @category    Nanobots
+ * @package     Nanobots_TempAdmin
  * @author      Sebastian Strojwas <sebastian@qsolutionsstudio.com>
  */
  -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="magespices" translate="label" sortOrder="10">
-            <label>Magespices</label>
+        <tab id="nanobots" translate="label" sortOrder="10">
+            <label>Nanobots</label>
         </tab>
         <section id="temp_admin" translate="label" type="text" sortOrder="10" showInDefault="1" showInStore="1" showInWebsite="1">
             <label>TempAdmin</label>
-            <resource>Magespices_TempAdmin::config</resource>
-            <tab>magespices</tab>
+            <resource>Nanobots_TempAdmin::config</resource>
+            <tab>nanobots</tab>
             <class>separator-top</class>
             <group id="general" sortOrder="10" translate="label" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General</label>

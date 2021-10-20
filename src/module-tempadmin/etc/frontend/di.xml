@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!--
 /**
- * Created by Q-Solutions Studio
+ * Copyright © Q-Solutions Studio: eCommerce Nanobots. All rights reserved.
  *
- * @category    Magespices
- * @package     Magespices_TempAdmin
+ * @category    Nanobots
+ * @package     Nanobots_TempAdmin
  * @author      Sebastian Strojwas <sebastian@qsolutionsstudio.com>
  */
  -->
@@ -13,7 +13,7 @@
         <arguments>
             <argument name="routerList" xsi:type="array">
                 <item name="temp_admin" xsi:type="array">
-                    <item name="class" xsi:type="string">Magespices\TempAdmin\Controller\Router</item>
+                    <item name="class" xsi:type="string">Nanobots\TempAdmin\Controller\Router</item>
                     <item name="disable" xsi:type="boolean">false</item>
                     <item name="sortOrder" xsi:type="string">35</item>
                 </item>

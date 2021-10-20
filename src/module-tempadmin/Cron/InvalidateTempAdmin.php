@@ -1,16 +1,16 @@
 <?php
 /**
- * Created by Q-Solutions Studio
+ * Copyright © Q-Solutions Studio: eCommerce Nanobots. All rights reserved.
  *
- * @category    Magespices
- * @package     Magespices_TempAdmin
+ * @category    Nanobots
+ * @package     Nanobots_TempAdmin
  * @author      Sebastian Strojwas <sebastian@qsolutionsstudio.com>
  */
 
-namespace Magespices\TempAdmin\Cron;
+namespace Nanobots\TempAdmin\Cron;
 
 use Magento\User\Model\UserFactory;
-use Magespices\TempAdmin\Model\AdminAccessTempFactory;
+use Nanobots\TempAdmin\Model\AdminAccessTempFactory;
 
 class InvalidateTempAdmin
 {

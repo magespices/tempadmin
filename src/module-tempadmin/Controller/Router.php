@@ -1,13 +1,13 @@
 <?php
 /**
- * Created by Q-Solutions Studio
+ * Copyright © Q-Solutions Studio: eCommerce Nanobots. All rights reserved.
  *
- * @category    Magespices
- * @package     Magespices_TempAdmin
+ * @category    Nanobots
+ * @package     Nanobots_TempAdmin
  * @author      Sebastian Strojwas <sebastian@qsolutionsstudio.com>
  */
 
-namespace Magespices\TempAdmin\Controller;
+namespace Nanobots\TempAdmin\Controller;
 
 use Magento\Framework\App\Action\Forward;
 use Magento\Framework\App\ActionFactory;
@@ -15,7 +15,7 @@ use Magento\Framework\App\ActionInterface;
 use Magento\Framework\App\RequestInterface;
 use Magento\Framework\App\RouterInterface;
 use Magento\Framework\UrlInterface;
-use Magespices\TempAdmin\Helper\Data as TempAdminHelper;
+use Nanobots\TempAdmin\Helper\Data as TempAdminHelper;
 
 class Router implements RouterInterface
 {

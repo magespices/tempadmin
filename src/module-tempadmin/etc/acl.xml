@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!--
 /**
- * Created by Q-Solutions Studio
+ * Copyright © Q-Solutions Studio: eCommerce Nanobots. All rights reserved.
  *
- * @category    Magespices
- * @package     Magespices_TempAdmin
+ * @category    Nanobots
+ * @package     Nanobots_TempAdmin
  * @author      Sebastian Strojwas <sebastian@qsolutionsstudio.com>
  */
  -->
@@ -16,7 +16,7 @@
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="Magespices_TempAdmin::config" sortOrder="1000" translate="label" title="Magespices TempAdmin - configuration" />
+                            <resource id="Nanobots_TempAdmin::config" sortOrder="1000" translate="label" title="Nanobots TempAdmin - configuration" />
                         </resource>
                     </resource>
                 </resource>
