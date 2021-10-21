@@ -27,16 +27,31 @@
                 </field>
                 <field id="secret_uri" type="text" translate="label" sortOrder="20" showInStore="1" showInWebsite="1" showInDefault="1">
                     <label>Secret URI</label>
-                    <validate>required-entry validate-length minimum-length-8</validate>
-                    <comment>min length: 8</comment>
+                    <validate>required-entry validate-length minimum-length-24 validate-no-empty validate-alphanum</validate>
+                    <comment>Minimum length: 24</comment>
                     <depends>
                         <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="whitelist_enabled" type="select" translate="label" sortOrder="25" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>IP Whitelist Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="whitelist_ips" type="textarea" translate="label" sortOrder="27" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Whitelist IPs</label>
+                    <validate>validate-no-empty</validate>
+                    <comment>IP address per line</comment>
+                    <depends>
+                        <field id="whitelist_enabled">1</field>
                     </depends>
                 </field>
                 <field id="email" type="text" translate="label" sortOrder="30" showInStore="1" showInWebsite="1" showInDefault="1">
                     <label>Email</label>
                     <validate>required-entry validate-email</validate>
-                    <comment>notifications will be send to this address</comment>
+                    <comment>Notifications will be send to this address</comment>
                     <depends>
                         <field id="enabled">1</field>
                     </depends>

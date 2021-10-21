@@ -26,34 +26,18 @@ use Zend_Mail_Exception;
  */
 class Data extends AbstractHelper
 {
-    /** @var string */
     public const TEMP_ADMIN_ENABLED_XPATH = 'temp_admin/general/enabled';
-
-    /** @var string */
     public const TEMP_ADMIN_URI_XPATH = 'temp_admin/general/secret_uri';
-
-    /** @var string */
     public const PASSWORD_LENGTH_XPATH = 'temp_admin/general/password_length';
-
-    /** @var string */
+    public const WHITELIST_ENABLED_XPATH = 'temp_admin/general/whitelist_enabled';
+    public const WHITELIST_IPS_XPATH = 'temp_admin/general/whitelist_ips';
     public const EMAIL_XPATH = 'temp_admin/general/email';
-
-    /** @var string */
     public const GENERAL_CONTACT_EMAIL_XPATH = 'trans_email/ident_general/email';
-
-    /** @var string */
     public const EMAIL_DOMAIN_XPATH = 'temp_admin/general/email_domain';
 
-    /** @var StoreManagerInterface */
     protected StoreManagerInterface $storeManager;
-
-    /** @var FormKey */
     protected FormKey $formKey;
-
-    /** @var Validator */
     protected Validator $formKeyValidator;
-
-    /** @var ResourceConnection */
     protected ResourceConnection $resourceConnection;
 
     /**
@@ -94,6 +78,41 @@ class Data extends AbstractHelper
             $this->_logger->error($exception->getMessage());
         }
         return false;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isWhitelistEnabled(): bool
+    {
+        try {
+            return $this->scopeConfig->isSetFlag(
+                static::WHITELIST_ENABLED_XPATH,
+                ScopeInterface::SCOPE_STORE,
+                $this->storeManager->getStore()->getId()
+            );
+        } catch (Exception $exception) {
+            $this->_logger->error($exception->getMessage());
+        }
+        return false;
+    }
+
+    /**
+     * @return array
+     */
+    public function getWhitelistIPs(): array
+    {
+        try {
+            return explode(PHP_EOL,
+                $this->scopeConfig->getValue(
+                static::WHITELIST_IPS_XPATH,
+                ScopeInterface::SCOPE_STORE,
+                $this->storeManager->getStore()->getId()
+            ));
+        } catch (Exception $exception) {
+            $this->_logger->error($exception->getMessage());
+        }
+        return [];
     }
 
     /**
